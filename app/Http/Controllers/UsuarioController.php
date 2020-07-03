@@ -22,11 +22,13 @@ class UsuarioController extends Controller
         $usuario = $request->txt_usuario; 
         $password = $request->txt_password;
         if ($usuario <> "admin" ){
-            return back()->withErrors(['user_error'=>"Usuario incorrecto"]);
+            return back()->withErrors(['user_error'=>"Usuario incorrecto"])
+                        ->withInput();
         }else if($password <> "123"){
-            return back()->withErrors(['password_error'=>"Contraseña Incorrecto"]);
+            return back()->withErrors(['user_error'=>"Contraseña Incorrecto"])
+                        ->withInput();
         }else
-        return redirect()->route('login'); 
+        return redirect()->route('logout'); 
     }
     public function logout()
     {
