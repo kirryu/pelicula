@@ -40,12 +40,12 @@
                           </select>
                           <div class="form-group">
                             <label for="">Resumen</label>
-                            <textarea class="form-control" name="" id="" rows="3"></textarea>
+                            <textarea class="form-control" name="txt_resumen" id="" rows="3"></textarea>
                           </div>
                           <div class="form-group">
                             <label for="">Precio: </label>
                             <input type="text"
-                              class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                              class="form-control" name="txt_precio" id="" aria-describedby="helpId" placeholder="">
                             <small id="helpId" class="form-text text-muted">Help text</small>
                           </div>
                           <button type="submit" class="btn btn-primary">Añadir</button>
