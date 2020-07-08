@@ -46,7 +46,7 @@
                             <label for="">Precio: </label>
                             <input type="text"
                               class="form-control" name="txt_precio" id="" aria-describedby="helpId" placeholder="">
-                            <small id="helpId" class="form-text text-muted">Help text</small>
+                            
                           </div>
                           <button type="submit" class="btn btn-primary">Añadir</button>
                           <button type="reset" class="btn btn-light">Limpiar</button>
