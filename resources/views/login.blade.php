@@ -25,14 +25,16 @@
                           
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, eum soluta eveniet cupiditate in hic iste id a maiores ipsum provident molestias velit, dolores esse quibusdam suscipit! Distinctio, voluptatibus amet.
                           @error('user_error')
-                            <div class="alert alert-success"> Usuario Incorrecto</div>
+                            <div class="alert alert-success"> {{ $message }} </div>
 
                           @enderror
-                          <form action=" {{ route('acceso')}} " method="POST"  >
+                          <form action=" {{ route('acceso') }} " method="POST" role="form"  >
+                            @csrf
                             <div class="form-group">
                               <label for="">Usuario:</label>
                               <input type="text"
-                                class="form-control" name="txt_usuario" id="" aria-describedby="helpId" placeholder="Usuario">
+                                class="form-control" name="txt_usuario" id="" aria-describedby="helpId" placeholder="Usuario"
+                                value=" {{ old('txt_usuario')  }} "  >
                               
                             </div>
 

@@ -20,7 +20,7 @@ Route::get('login','UsuarioController@login')->name("login");
 
 Route::post('login/acceso','UsuarioController@acceso' )->name('acceso');
 
-Route::get('logout','UsuarioController@logout');
+Route::get('logout','UsuarioController@logout')->name('logout');
 
 Route::get('catalog/show/{id}', 'CatalogoController@show');
 

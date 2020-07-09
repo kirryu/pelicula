@@ -23,7 +23,8 @@
                     <div class="col-lg-6 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                           
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, eum soluta eveniet cupiditate in hic iste id a maiores ipsum provident molestias velit, dolores esse quibusdam suscipit! Distinctio, voluptatibus amet.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, eum soluta eveniet cupiditate in hic iste id a maiores ipsum provident 
+                          molestias velit, dolores esse quibusdam suscipit! Distinctio, voluptatibus amet.
                           
                         <h1>Que disfrute su funcion</h1>
                     </div>
