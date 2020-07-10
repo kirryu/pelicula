@@ -27,6 +27,7 @@ Route::get('catalog/show/{id}', 'CatalogoController@show');
 Route::get('catalog', 'CatalogoController@index');
 
 Route::get('catalog/create', 'CatalogoController@create');
+Route::post('catalog/create/function','CatalogoController@store')->name("pelicula_store");
 
 Route::get('catalog/edit/{id}', 'CatalogoController@edit');
 

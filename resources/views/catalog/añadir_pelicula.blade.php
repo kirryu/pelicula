@@ -24,7 +24,7 @@
                           
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, eum soluta eveniet cupiditate in hic iste id a maiores ipsum provident molestias velit, dolores esse quibusdam suscipit! Distinctio, voluptatibus amet.
                         
-                        <form action="" method="POST" role="form">
+                        <form action=" {{}} " method="POST" role="form">
                           @csrf
                           <div class="form-group">
                             <label for="">Titulo:</label>
