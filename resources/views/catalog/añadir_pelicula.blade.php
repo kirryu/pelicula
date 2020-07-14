@@ -23,14 +23,18 @@
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                           
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, eum soluta eveniet cupiditate in hic iste id a maiores ipsum provident molestias velit, dolores esse quibusdam suscipit! Distinctio, voluptatibus amet.
-                        
-                        <form action=" {{}} " method="POST" role="form">
+                        @error('store_error')
+                            <div class="alert alert-success"> {{ $message }} </div>
+                        @enderror
+                        <form action=" {{ route('pelicula_store') }} " method="POST" role="form">
                           @csrf
                           <div class="form-group">
                             <label for="">Titulo:</label>
                             <input type="text" class="form-control" name="txt_titulo" id="" aria-describedby="helpId" placeholder="Titulo">
                             <small id="helpId" class="form-text text-muted">Help text</small>
                           </div>
+                          <div class="form-group">
+                            <label for=""> Genero: </label>
                           <select name="txt_genero">
                               <option value="Drama" > Drama</option>
                               <option value="Terror"> Terror </option>
@@ -38,14 +42,19 @@
                               <option value="Comedia"> Comedia </option>
                               <option value="Romance"> Romance </option>
                           </select>
+                          </div>
                           <div class="form-group">
                             <label for="">Resumen</label>
                             <textarea class="form-control" name="txt_resumen" id="" rows="3"></textarea>
                           </div>
                           <div class="form-group">
+                            @error('store_error')
+                                <div class="alert alert-warning"> {{ $message }} </div>
+                            @enderror
                             <label for="">Precio: </label>
                             <input type="text"
-                              class="form-control" name="txt_precio" id="" aria-describedby="helpId" placeholder="">
+                              class="form-control" name="txt_precio" id="" aria-describedby="helpId" placeholder=""
+                              value=" {{ old('txt_precio') }} ">
                             
                           </div>
                           <button type="submit" class="btn btn-primary">Añadir</button>

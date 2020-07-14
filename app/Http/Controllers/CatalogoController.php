@@ -27,9 +27,17 @@ class CatalogoController extends Controller
         $obj->titulo = $request->txt_titulo; 
         $obj->genero = $request->txt_genero; 
         $obj->resumen = $request->txt_resumen;
-        $obj->precio = $request->txt_precio; 
+        if ($request->txt_precio < 5.00)
+        {
+            return back()->withErrors(['store_error'=>"El precio es menor a $5.0"])
+                        ->withInput();
+        }else 
+        {
+            $obj->precio = $request->txt_precio; 
+        }
+        
         $obj->save();
-        return back();
+        return back()->withErrors(['store_error'=>"Pelicula añadida"]);
     }
 
     public function edit($id)

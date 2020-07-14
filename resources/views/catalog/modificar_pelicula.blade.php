@@ -24,25 +24,30 @@
                           
                         <h2>Pelicula Seleccionada: {{ $id }}</h2>
                         
-                        <form action="" method="post">
+                        <form action="" method="post" >
                           <div class="form-group">
                             <label for="">Titulo:</label>
-                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Titulo">
+                            <input type="text" class="form-control" name="txt_titulo" id="" aria-describedby="helpId" placeholder="Titulo">
                             <small id="helpId" class="form-text text-muted">Help text</small>
                           </div>
                           <div class="form-group">
-                            <label for="">Genero:</label>
-                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Genero">
-                            <small id="helpId" class="form-text text-muted">Help text</small>
+                            <label for=""> Genero: </label>
+                          <select name="txt_genero">
+                              <option value="Drama" > Drama</option>
+                              <option value="Terror"> Terror </option>
+                              <option value="Accion"> Accion </option>
+                              <option value="Comedia"> Comedia </option>
+                              <option value="Romance"> Romance </option>
+                          </select>
                           </div>
                           <div class="form-group">
                             <label for="">Resumen</label>
-                            <textarea class="form-control" name="" id="" rows="3"></textarea>
+                            <textarea class="form-control" name="txt_resumen" id="" rows="3"></textarea>
                           </div>
                           <div class="form-group">
                             <label for="">Precio: </label>
                             <input type="text"
-                              class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                              class="form-control" name="txt_precio" id="" aria-describedby="helpId" placeholder="">
                             <small id="helpId" class="form-text text-muted">Help text</small>
                           </div>
                           <button type="submit" class="btn btn-primary">Guardar</button>
